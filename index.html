@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P+ ID Bookmarklet</title>
+    <style>
+        a {
+          display: block;      /* Required to apply width and height */
+          width: 100vw;        /* 100% of the viewport width */
+          height: 100vh;       /* 100% of the viewport height */
+          position: fixed;     /* Keeps it over all other content */
+          top: 0;
+          left: 0;
+          z-index: 9999;       /* Ensures it stays on top */
+          text-decoration: none; /* Optional: removes default underline */
+        }
+    </style>
 </head>
 <body>
     <a href="javascript:(function(){alert(`${CBS.Registry.user.id},${CBS.Registry.user.profile_id}`)})();">P+ ID Bookmarklet</a>
